@@ -1,19 +1,26 @@
 * {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
 nav {
     padding: 10px;   
 }
-nav img {
-    width: 60px;
-    height: 60px;
+nav a {
     display: block;
     margin-bottom: 10px;
 }
-nav img:hover {
-    cursor: pointer;
+nav a img {
+    width: 60px;
+    height: 60px;
 }
-nav img:last-child {
+nav a img:hover {
+    cursor: pointer;
+    transition: 2s;
+    transform: scale(1.5);
+}
+nav a:last-child {
     margin-bottom: 0;
 }
 main {
@@ -30,7 +37,7 @@ main {
 header {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -10px;
     width: 100%;
     z-index: 20;
 }
