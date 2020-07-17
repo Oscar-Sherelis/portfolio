@@ -36,9 +36,7 @@ main {
     top: 0;
     left: 0;
     background-image: linear-gradient(#142842,#1d1a36);
-    min-width: 100vw;
     min-height: 100vh;
-    max-width: 100vw;
     max-height: 100vh;
 }
 .main__title {
@@ -55,6 +53,17 @@ h1 {
 h2 {
     font-size: 3rem;
 }
-footer {
-    min-height: 100vh;
+.skill-section__skills {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.skill-section__title {
+    text-align: center;
+}
+.skill-section__skills img {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
 }
