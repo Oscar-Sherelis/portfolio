@@ -53,7 +53,6 @@ h1 {
 h2 {
     font-size: 3rem;
 }
-
 .skill-heading {
     display: flex;
     height: 100%;
@@ -61,30 +60,28 @@ h2 {
     padding: 1rem;
     justify-content: center;
     align-items: center;
-  }
-  
-  .heading {
+}
+.heading {
     font-size: 5vw;
     text-shadow: 4px 4px 0px #3F7FBF;
     mix-blend-mode: screen;
     animation: fadeIn 2.5s linear forwards;
-  }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
   
-  @keyframes fadeIn {
-      0% {
-          opacity: 0
-      }
-  
-      100% {
-          opacity: 1;
-      }
-  }
-
+    100% {
+        opacity: 1;
+    }
+}
 .skill-section__skills {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 50%;
     margin: 0 auto;
+    grid-gap: 1rem;
 }
 .skill-section__title {
     text-align: center;
