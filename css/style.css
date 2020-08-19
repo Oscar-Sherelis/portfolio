@@ -52,8 +52,16 @@ h1 {
 }
 h2 {
     font-size: 3rem;
+    padding: 25px;
 }
-.skill-heading {
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+.skill-heading,
+.project-heading {
     display: flex;
     height: 100%;
     width: 100%;
@@ -61,7 +69,8 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.heading {
+.skill-heading h2,
+.project-heading h2 {
     font-size: 5vw;
     text-shadow: 4px 4px 0px #3F7FBF;
     mix-blend-mode: screen;
@@ -76,7 +85,8 @@ h2 {
         opacity: 1;
     }
 }
-.skill-section__skills {
+.skill-section__skills,
+.project-section__projects {
     display: grid;
     grid-template-columns: auto auto auto;
     width: 50%;
@@ -99,3 +109,87 @@ h2 {
     margin: 0 auto;
     padding: 10px;
 }
+
+/* projects */
+
+.project-section__project {
+    overflow: hidden;
+    /* height: 250px; */
+    width: 200px;
+    max-width: 300px;
+    border-radius: 14px;
+}
+.project-image {
+    overflow: hidden;
+    object-fit: cover;
+    -o-object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+.project-image img {
+    width: 100%;
+    vertical-align: middle;
+    object-fit: contain;
+    -o-object-fit: contain;
+}  
+.skills-used {
+    width: 50px;
+    height: 50px;
+}
+.live-code {
+    display: flex;
+    justify-content: center;
+}
+.live-code a {
+    text-decoration: none;
+}
+.live-code a:nth-child(1) {
+    margin-right: 10px;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 780px) {
+    h1 {
+
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .skill-heading h2,
+    .project-heading h2 {
+        font-size: 2rem;
+        
+    }
+    .skill-section__skills,
+    .project-section__projects {
+        width: 75%;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    h1 {
+
+        font-size: 2.1rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .skill-heading h2,
+    .project-heading h2 {
+        text-shadow: 2px 2px 0px #3F7FBF;
+    }
+    .skill-section__skills,
+    .project-section__projects {
+        width: 100%;
+    }
+    .project-section__projects  {
+        grid-template-columns: auto;
+    }
+    .project-section__project {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border: 1px solid silver;
+    }
+  }
