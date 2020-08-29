@@ -46,6 +46,9 @@ main {
     color: #fff;
     z-index: 15;
 }
+a {
+    text-decoration: none;
+}
 h1 {
 
     font-size: 5rem;
@@ -59,6 +62,7 @@ h3 {
     text-align: center;
     padding: 15px;
 }
+/* Skills */
 .skill-heading,
 .project-heading,
 .contact-heading {
@@ -81,6 +85,11 @@ h3 {
     100% {
         opacity: 1;
     }
+}
+.skill-section,
+.project-section,
+.contact-section {
+    margin-bottom: 40px;
 }
 .skill-section__skills,
 .project-section__projects {
@@ -112,8 +121,6 @@ h3 {
 .project-section__project {
     overflow: hidden;
     /* height: 250px; */
-    width: 200px;
-    max-width: 300px;
     border-radius: 14px;
     border: 1px solid silver;
 }
@@ -121,7 +128,6 @@ h3 {
     overflow: hidden;
     object-fit: cover;
     -o-object-fit: cover;
-    width: 200px;
     height: 150px;
 }
 .project-image img {
@@ -153,26 +159,57 @@ h3 {
     width: 50px;
     height: 50px;
 }
-.contacts a:first-child {
-    margin-right: 20px;
-}
-.contacts {
+form {
+    font: "Times new Roman";
     width: 50%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+}
+::placeholder {
+    color: #fff;
+}
+textarea {
+    min-height: 100px;
+}
+input,
+textarea {
+    outline: none;
+    padding: 10px;
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+    background-color: #1e242c;
+    font-size: 20px;
+    border-radius: 15px;
+    font-family: Nunito Sans,sans-serif;
+}
+input:focus,
+textarea:focus {
+    border: 2px solid #3F7FBF;
+}
+form button {
+    background-color: #539e43;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
 }
 footer {
     padding: 15px;
-    text-align: center;
-    margin-top: 30px;
     background-color: #18223c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
 }
 /* Media queries */
 
-@media only screen and (max-width: 780px) {
+@media only screen and (min-width: 642px) {
     h1 {
 
         font-size: 4rem;
@@ -191,7 +228,7 @@ footer {
         width: 75%;
     }
   }
-  @media only screen and (max-width: 420px) {
+  @media only screen and (max-width: 641px) {
     h1 {
 
         font-size: 2.1rem;
@@ -206,7 +243,7 @@ footer {
     }
     .skill-section__skills,
     .project-section__projects {
-        width: 100%;
+        width: 80%;
     }
     .project-section__projects  {
         grid-template-columns: auto;
@@ -215,5 +252,8 @@ footer {
         display: block;
         margin: 0 auto;
         margin-bottom: 20px;
+    }
+    form {
+        width: 80%;
     }
   }
