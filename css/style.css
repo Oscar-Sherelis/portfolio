@@ -239,12 +239,17 @@ footer {
     .contact-heading h2 {
         font-size: 2rem;
     }
-    .skill-section__skills,
     .project-section__projects {
         width: 60%;
     }
+    .skill-section__skills {
+        width: 40%;
+    }
   }
   @media only screen and (max-width: 641px) {
+    main {
+        clip-path: polygon(0 0, 100% 0%, 100% 90%, 0 60%);
+    }
     h1 {
 
         font-size: 2.1rem;
