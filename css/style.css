@@ -125,7 +125,7 @@ h3 {
 
 .project-section__project {
     overflow: hidden;
-    /* height: 250px; */
+    max-width: 300px;
     border-radius: 14px;
     border: 1px solid silver;
 }
@@ -241,7 +241,7 @@ footer {
     }
     .skill-section__skills,
     .project-section__projects {
-        width: 75%;
+        width: 60%;
     }
   }
   @media only screen and (max-width: 641px) {
