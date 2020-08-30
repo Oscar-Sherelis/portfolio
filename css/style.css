@@ -40,6 +40,9 @@ main {
     color: #fff;
     z-index: 15;
 }
+.main__title h2 {
+    border-bottom: none;
+}
 a {
     text-decoration: none;
 }
@@ -49,6 +52,11 @@ h1 {
 }
 h2 {
     font-size: 3.5rem;
+    border-bottom: 0.5px solid #547495;
+    padding: 5px;
+    width: 80%;
+    text-align: center;
+    /* margin: 0 auto; */
 }
 h3 {
     font-size: 1.2rem;
@@ -67,9 +75,10 @@ h3 {
 .skill-heading h2,
 .project-heading h2,
 .contact-heading h2 {
-    text-shadow: 4px 4px 0px #3F7FBF;
+    font-weight: bold;
+    /* text-shadow: 4px 4px 0px #3F7FBF;
     mix-blend-mode: screen;
-    animation: fadeIn 2.5s linear forwards;
+    animation: fadeIn 2.5s linear forwards; */
 }
 @keyframes fadeIn {
     0% {
@@ -229,7 +238,6 @@ footer {
     .project-heading h2,
     .contact-heading h2 {
         font-size: 2rem;
-        
     }
     .skill-section__skills,
     .project-section__projects {
@@ -243,11 +251,6 @@ footer {
     }
     h2 {
         font-size: 1.3rem;
-    }
-    .skill-heading h2,
-    .project-heading h2,
-    .contact-heading h2 {
-        text-shadow: 2px 2px 0px #3F7FBF;
     }
     .skill-section__skills {
         grid-template-columns: auto auto;
