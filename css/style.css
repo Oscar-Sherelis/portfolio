@@ -42,13 +42,107 @@ main {
 }
 .main__title h2 {
     border-bottom: none;
+    width: 100%;
+    -webkit-animation: slide-right 1.5s ease-in-out forwards;
+	animation: slide-right 1.5s ease-in-out forwards;
 }
+/* headings */
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 250px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #96bef3;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #173864;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #1d5db1;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #48505c;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #000;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+/* headings end */
 a {
     text-decoration: none;
 }
+ @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(300px);
+              transform: translateX(300px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(300px);
+              transform: translateX(300px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      -webkit-transform: translateX(-300px);
+              transform: translateX(-300px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  
 h1 {
 
     font-size: 5rem;
+    -webkit-animation: slide-left 1.5s ease-in-out forwards;
+	animation: slide-left 1.5s ease-in-out forwards;
 }
 h2 {
     font-size: 3.5rem;
@@ -56,7 +150,6 @@ h2 {
     padding: 10px;
     width: 65%;
     text-align: center;
-    /* margin: 0 auto; */
 }
 h3 {
     font-size: 1.2rem;
